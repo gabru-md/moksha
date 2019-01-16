@@ -16,7 +16,6 @@
 let applydefault = (b) => {
   document.getElementById(b).style.color = "rgba(255, 255, 255, .5)";
   document.getElementById(b).style.borderBottomColor = "transparent";
-
 }
 
 let applyprop = (a) => {
