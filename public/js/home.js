@@ -58,14 +58,16 @@ var flutter = setInterval(() => {
     x = 0;
     document.getElementById("logo2").hidden = true;
   }
-}, Math.random());
+}, 300);
 
 
 function on_volunteers() {
-  off_contacts();
-  document.getElementById("overlay_volunteers").style.display = "block";
-  applyprop("_volunteers");
   blurit();
+  setTimeout(function() {
+    off_contacts();
+    document.getElementById("overlay_volunteers").style.display = "block";
+    applyprop("_volunteers");
+  }, 300);
 }
 
 function off_volunteers() {
@@ -75,10 +77,12 @@ function off_volunteers() {
 
 
 function on_contacts() {
-  off_volunteers();
-  document.getElementById("overlay_contacts").style.display = "block";
-  applyprop("_contact");
   blurit();
+  setTimeout(function(){
+    off_volunteers();
+    document.getElementById("overlay_contacts").style.display = "block";
+    applyprop("_contact");
+  }, 300);
 }
 
 function off_contacts() {
@@ -87,10 +91,10 @@ function off_contacts() {
 }
 
 function on_home() {
+  unblurit();
   off_volunteers();
   off_contacts();
   applyprop("_home");
-  unblurit();
   // document.getElementById("_home").className = ".blur";
 
 }
