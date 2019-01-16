@@ -1,21 +1,21 @@
-<div class="row">
+<div class="card-columns etc">
 
-{{#each departments as |department|}}
-    <div class="col-xs-2">
-        <div class="card card-image orange-card">
+  {{#each departments as |department|}}
+  <div class="col-xs-2">
+    <div class="card card-image orange-card">
 
-          <!-- Content -->
-          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-            <div>
-              <h3 class="card-title pt-2"><strong>{{department.name}}</strong></h3>
-              <p>{{department.description}}</p>
-              <a class="btn btn-pink" href="{{department.google_link}}"><i class="fas fa-clone left"></i>Register</a>
-            </div>
-          </div>
-
+      <!-- Content -->
+      <div class="text-white d-flex rgba-black-strong py-5 px-4">
+        <div>
+          <h3 class="card-title pt-2"><strong>{{department.name}}</strong></h3>
+          <p class="card-text">{{department.description}}</p>
+          <a href="{{department.google_link}}"><i class="fas fa-clone left card-text"></i>Register</a>
         </div>
+      </div>
 
     </div>
-{{/each}}
+
+  </div>
+  {{/each}}
 
 </div>

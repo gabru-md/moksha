@@ -1,6 +1,10 @@
-<div class="home-component">
+<div id="bg-img2"></div>
+<div id="bg-img">
     {{home-component}}
 </div>
+
+{{!-- <div class="text-center top home-component"> --}}
+    {{!-- </div> --}}
 <div id="overlay_volunteers" onclick="off_volunteers()">
     <div class="moksha-volunteers">
         {{moksha-volunteers departments=this.model.departments}}
@@ -11,8 +15,19 @@
         {{moksha-contact heads=this.model.heads}}
     </div>
 </div>
-<button onclick="on_volunteers()">Volunteers</button>
-<button onclick="on_contacts()">Contact</button>
+
+<header class="masthead mb-auto hold" style="position: fixed">
+    <div class="inner">
+        <nav class="nav nav-masthead navcss">
+            <a class="nav-link active" id="_home" onclick="on_home()">Home</a>
+            <a class="nav-link" id="_volunteers" onclick="on_volunteers()">Volunteers</a>
+            <a class="nav-link" id="_contact" onclick="on_contacts()">Contact</a>
+        </nav>
+    </div>
+</header>
+
+{{!-- <button onclick="on_volunteers()">Volunteers</button>
+<button onclick="on_contacts()">Contact</button> --}}
 
 
 <!-- <div class="moksha-contact">
