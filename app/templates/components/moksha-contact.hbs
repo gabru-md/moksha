@@ -1,15 +1,17 @@
-{{#each heads as |head|}}
-<div class="col-xs-2">
-    <div class="card card-image orange-card">
+<div class="card-columns etc">
+    {{#each heads as |head|}}
+    <div class="col-xs-2">
+        <div class="card card-image orange-card">
 
-        <!-- Content -->
-        <div class="text-white d-flex rgba-black-strong py-5 px-4">
-            <div>
-                <h3 class="card-title pt-2"><strong>{{head.name}}</strong></h3>
-                <p class="card-text">{{head.position}}</p>
-                <a href="{{department.google_link}}"><i class="fas fa-clone left card-text"></i>{{head.phone}}</a>
+            <!-- Content -->
+            <div class="text-white d-flex rgba-black-strong py-5 px-4">
+                <div>
+                    <h3 class="card-title pt-2"><strong>{{head.name}}</strong></h3>
+                    <p class="card-text">{{head.position}}</p>
+                    <a href="{{department.google_link}}"><i class="fas fa-clone left card-text"></i>{{head.phone}}</a>
+                </div>
             </div>
         </div>
     </div>
+    {{/each}}
 </div>
-{{/each}}
