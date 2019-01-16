@@ -1,4 +1,24 @@
+<div class="home-component">
     {{home-component}}
+</div>
+<div id="overlay_volunteers" onclick="off_volunteers()">
+    <div class="moksha-volunteers">
+        {{moksha-volunteers departments=this.model.departments}}
+    </div>
+</div>
+<div id="overlay_contacts" onclick="off_contacts()">
+    <div class="moksha-contacts">
+        {{moksha-contact heads=this.model.heads}}
+    </div>
+</div>
+<button onclick="on_volunteers()">Volunteers</button>
+<button onclick="on_contacts()">Contact</button>
+
+
+<!-- <div class="moksha-contact">
+    {{moksha-contact heads=this.model.heads}}
+</div> -->
+
 
 
 

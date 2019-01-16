@@ -1,5 +1,21 @@
+<div class="row">
+
 {{#each departments as |department|}}
-    <a href="{{department.google_link}}">
-        <h2>{{department.name}}</h2>
-    </a>
+    <div class="col-xs-2">
+        <div class="card card-image orange-card">
+
+          <!-- Content -->
+          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+            <div>
+              <h3 class="card-title pt-2"><strong>{{department.name}}</strong></h3>
+              <p>{{department.description}}</p>
+              <a class="btn btn-pink" href="{{department.google_link}}"><i class="fas fa-clone left"></i>Register</a>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
 {{/each}}
+
+</div>

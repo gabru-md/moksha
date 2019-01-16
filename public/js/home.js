@@ -44,3 +44,21 @@ var flutter = setInterval(() => {
     document.getElementById("logo2").hidden = true;
   }
 }, 500);
+
+
+function on_volunteers() {
+  document.getElementById("overlay_volunteers").style.display = "block";
+}
+
+function off_volunteers() {
+  document.getElementById("overlay_volunteers").style.display = "none";
+}
+
+
+function on_contacts() {
+  document.getElementById("overlay_contacts").style.display = "block";
+}
+
+function off_contacts() {
+  document.getElementById("overlay_contacts").style.display = "none";
+}
