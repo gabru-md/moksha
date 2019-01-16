@@ -28,7 +28,7 @@ let applyprop = (a) => {
   document.getElementsByClassName("nav").focus = "auto";
 }
 
-var countDownDate = new Date("Mar 16, 2019 00:00:01").getTime();
+var countDownDate = new Date("Mar 14, 2019 00:00:01").getTime();
 
 var countDown = setInterval(function () {
   var now = new Date().getTime();
