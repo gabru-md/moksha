@@ -40,12 +40,14 @@
   z-index: 1;
 }
 
+
+
 #logo2{
   position: absolute;
   top:40%;
   left:50%;
   max-height: 45vh;
-  transform: translate(-50%, -50%) scale(1.003);
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 
@@ -61,7 +63,7 @@
 #_volunteers, #_contact, #_home {
   cursor: -webkit-grabbing;
   font-size: 2vh;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, .5);
 }
 
 #_home{
@@ -159,21 +161,25 @@ a:hover{
   top: 5%;
 }
 
-#countdown1{
+.countdown{
   position: absolute;
+  display: flex;
   top:70%;
   left:50%;
   transform: translate(-50%);
   font-family: 'ZingRustD2Demo-Base';
-  font-size: 5vh;
+  font-size: 4vh;
 }
 
+#countdown2{
+  margin-left: 1vh;
+}
 
 #overlay_contacts, #overlay_volunteers {
   position: fixed;
   display: none;
   width: 100%;
-  height: 100%;
+  height: 85%;
   top: 15%;
   left: 10%;
   right: 0;
