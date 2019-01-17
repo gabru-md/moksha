@@ -57,7 +57,7 @@
 .logo3{
   position: absolute;
   max-height: 2vh;
-  top: 80%;
+  top: 78%;
   left:50%;
   transform: translate(-50%, 0%);
 }
@@ -152,6 +152,10 @@ a:hover{
   margin-left: 1rem;
 }
 
+.countdown2{
+  z-index: -1;
+}
+
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
@@ -163,17 +167,39 @@ a:hover{
   top: 5%;
 }
 
-.countdown{
-  position: absolute;
-  display: flex;
-  top:70%;
-  left:50%;
+.countdown_1, .countdown_2, .countdown_3{
+  position: fixed;
+  left: 50%;
   transform: translate(-50%);
-  font-family: 'ZingRustD2Demo-Base';
-  font-size: 4vh;
+  display: flex;
+  align-content: center;
+  color: white;
+  font-weight: 500;
 }
 
-#countdown2{
+.countdown_1{
+  font-family: "ZingRustDemo-Sh1";
+  z-index: -1;
+}
+.countdown_2{
+  font-family: "ZingRustD2Demo-Base";
+  z-index: 0;
+}
+.countdown_3{
+  font-family: "ZingRustLH1Demo-Fill";
+  z-index: 1;
+}
+
+.countdown{
+  position: fixed;
+  left: 50%;
+  top:68%;
+  width: 100vw;
+  transform: translate(-50%, -50%);
+  font-size: 5vh;
+}
+
+.countdown2{
   margin-left: 1vh;
 }
 
@@ -196,4 +222,31 @@ a:hover{
 
 #overlay_contacts {
     padding-left: 5%;
+}
+
+
+@font-face {
+  font-family: 'ZingRustD2Demo-Base';
+  src: url('/font/ZingRustD2Demo-Base.eot?#iefix') format('embedded-opentype'),  url('/font/ZingRustD2Demo-Base.otf')  format('opentype'),
+	     url('/font/ZingRustD2Demo-Base.woff') format('woff'), url('/font/ZingRustD2Demo-Base.ttf')  format('truetype'), url('/font/ZingRustD2Demo-Base.svg#ZingRustD2Demo-Base') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ZingRustLH1Demo-Fill';
+  src: url('/font/ZingRustLH1Demo-Fill.eot?#iefix') format('embedded-opentype'),  url('/font/ZingRustLH1Demo-Fill.otf')  format('opentype'),
+	     url('/font/ZingRustLH1Demo-Fill.woff') format('woff'), url('/font/ZingRustLH1Demo-Fill.ttf')  format('truetype'), url('/font/ZingRustLH1Demo-Fill.svg#ZingRustLH1Demo-Fill') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ZingRustDemo-Sh1';
+  src: url('/font/ZingRustDemo-Sh1.eot?#iefix') format('embedded-opentype'),  url('/font/ZingRustDemo-Sh1.otf')  format('opentype'),
+	     url('/font/ZingRustDemo-Sh1.woff') format('woff'), url('/font/ZingRustDemo-Sh1.ttf')  format('truetype'), url('/font/ZingRustDemo-Sh1.svg#ZingRustDemo-Sh1') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }

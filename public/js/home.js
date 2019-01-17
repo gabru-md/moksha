@@ -39,11 +39,11 @@ var countDown = setInterval(function () {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  $('#countdown1').html(days + "d " + hours + "h " + minutes + "m ");
-  $('#countdown2').html("\t" + seconds + "s");
+  $('.countdown1').html(days + "d " + hours + "h " + minutes + "m ");
+  $('.countdown2').html("\t" + seconds + "s");
   if (distance < 0) {
     clearInterval(countDown);
-    $('#countdown1').html('wait is over');
+    $('.countdown1').html('wait is over');
 
   }
 }, 1000);
@@ -64,7 +64,7 @@ var flutter = setInterval(() => {
 
 function on_volunteers() {
   blurit();
-  setTimeout(function() {
+  setTimeout(function () {
     off_contacts();
     document.getElementById("overlay_volunteers").style.display = "block";
     applyprop("_volunteers");
@@ -79,7 +79,7 @@ function off_volunteers() {
 
 function on_contacts() {
   blurit();
-  setTimeout(function(){
+  setTimeout(function () {
     off_volunteers();
     document.getElementById("overlay_contacts").style.display = "block";
     applyprop("_contact");
