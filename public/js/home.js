@@ -39,8 +39,8 @@ var countDown = setInterval(function () {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  $('.countdown1').html(days + "d " + hours + "h " + minutes + "m ");
-  $('.countdown2').html("\t" + seconds + "s");
+  $('.countdown1').html(days + "d " + hours + "h " );
+  $('.countdown2').html( minutes + "m "+" " + seconds + "s");
   if (distance < 0) {
     clearInterval(countDown);
     $('.countdown1').html('wait is over');

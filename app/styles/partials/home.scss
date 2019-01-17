@@ -33,7 +33,7 @@
 
 .logo1{
   position: absolute;
-  top:40%;
+  top:40vh;
   left:50%;
   max-width: 80%;
   max-height: 45vh;
@@ -57,7 +57,7 @@
 .logo3{
   position: absolute;
   max-height: 2vh;
-  top: 78%;
+  top: 72vh;
   left:50%;
   transform: translate(-50%, 0%);
 }
@@ -116,43 +116,9 @@ a {
   color: rgba(255, 255, 255, 0.6);
 }
 
-a:hover{
-  color: white;
-  text-decoration: none;
-}
-
-.fa {
-  padding: 5px;
-  font-size: 70px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-#_about{
-  color: white;
-}
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-  cursor: pointer;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
 
 .countdown2{
+  margin-left: 1vw;
   z-index: -1;
 }
 
@@ -172,6 +138,7 @@ a:hover{
   left: 50%;
   transform: translate(-50%);
   display: flex;
+  flex-flow: nowrap;
   align-content: center;
   color: white;
   font-weight: 500;
@@ -179,27 +146,29 @@ a:hover{
 
 .countdown_1{
   font-family: "ZingRustDemo-Sh1";
-  z-index: -1;
+  color: orange;
+  z-index: 0;
 }
 .countdown_2{
   font-family: "ZingRustD2Demo-Base";
   z-index: 0;
+  font-weight: 550;
 }
 .countdown_3{
   font-family: "ZingRustLH1Demo-Fill";
-  z-index: 1;
+  z-index: 0;
 }
 
 .countdown{
   position: fixed;
   left: 50%;
-  top:68%;
+  top:62vh;
   width: 100vw;
   transform: translate(-50%, -50%);
-  font-size: 5vh;
+  font-size: 6vh;
 }
 
-.countdown2{
+.downdown2{
   margin-left: 1vh;
 }
 
