@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.py5{
+  padding-top: none !important;
+}
+
 .etc{
   width: 80vw;
   align-content: center;
@@ -185,7 +189,6 @@ a {
   bottom: 0;
   color: white;
   z-index: 2;
-  cursor: pointer;
   overflow-y : auto;
   overflow-x: hidden;
 }
