@@ -1,0 +1,62 @@
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Event Email</span>
+    </div>
+    {{input name="eventEmail" value=eventEmail placeholder="Event Email" type="text"}}
+</div>
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Event Name</span>
+    </div>
+    {{input name="eventName" value=eventName placeholder="Event Name" type="text"}}
+</div>
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Event Head</span>
+    </div>
+    {{input name="eventHead" value=eventHead placeholder="Event Head" type="text"}}
+</div>
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Event Head Contact</span>
+    </div>
+    {{input name="eventHeadContact" value=eventHeadContact placeholder="Event Head Contact" type="text"}}
+</div>
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Event Head Email</span>
+    </div>
+    {{input name="eventHeadEmail" value=eventHeadEmail placeholder="Event Head Email" type="text"}}
+</div>
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Society</span>
+    </div>
+    {{input name="society" value=society placeholder="Society" type="text"}}
+</div>
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Event Description</span>
+    </div>
+    {{input name="eventDescription" value=eventDescription placeholder="Event Description" type="text"}}
+</div>
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Event Venue</span>
+    </div>
+    {{input name="eventVenue" value=eventVenue placeholder="Event Venue" type="text"}}
+</div>
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Event Type</span>
+    </div>
+    {{input name="eventType" value=eventType placeholder="Event Type" type="text"}}
+</div>
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Event Reg Link</span>
+    </div>
+    {{input name="eventRegLink" value=eventRegLink placeholder="Event Registration Link" type="text"}}
+</div>
+
+<button onclick={{action 'createEvent'}}>Add Event</button>

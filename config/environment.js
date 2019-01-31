@@ -2,6 +2,14 @@
 
 module.exports = function(environment) {
   let ENV = {
+    firebase: {
+      apiKey: "AIzaSyCY4X5LaFdTUcJv9ASqC0PJwJ3j7PMCTec",
+      authDomain: "moksha2k19.firebaseapp.com",
+      databaseURL: "https://moksha2k19.firebaseio.com",
+      projectId: "moksha2k19",
+      storageBucket: "moksha2k19.appspot.com",
+      messagingSenderId: "843756027810"
+    },  
     modulePrefix: 'moksha',
     environment,
     rootURL: '/',
