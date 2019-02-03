@@ -60,3 +60,12 @@
 </div>
 
 <button onclick={{action 'createEvent'}}>Add Event</button>
+
+<br><br>
+
+<h2>Available Events</h2>
+<ul>
+    {{#each events as |event|}}
+    <li>{{event.eventName}}</li>
+    {{/each}}
+</ul>
