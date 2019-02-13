@@ -66,6 +66,7 @@ function on_volunteers() {
   blurit();
   setTimeout(function () {
     off_contacts();
+    off_events();
     document.getElementById("overlay_volunteers").style.display = "block";
     applyprop("_volunteers");
   }, 300);
@@ -81,6 +82,7 @@ function on_contacts() {
   blurit();
   setTimeout(function () {
     off_volunteers();
+    off_events();
     document.getElementById("overlay_contacts").style.display = "block";
     applyprop("_contact");
   }, 300);
@@ -95,6 +97,7 @@ function on_home() {
   unblurit();
   off_volunteers();
   off_contacts();
+  off_events();
   applyprop("_home");
   // document.getElementById("_home").className = ".blur";
 
@@ -108,4 +111,19 @@ let blurit = () => {
 let unblurit = () => {
   document.getElementById("bg-img").classList.add("unblur");
   document.getElementById("bg-img").classList.remove("blur");
+}
+
+function on_events() {
+  blurit();
+  setTimeout(function () {
+    off_volunteers();
+    off_contacts();
+    document.getElementById("overlay_events").style.display = "block";
+    applyprop("_events");
+  }, 300);
+}
+
+function off_events() {
+  document.getElementById("overlay_events").style.display = "none";
+  applyprop("_home");
 }

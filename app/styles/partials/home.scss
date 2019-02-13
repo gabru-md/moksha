@@ -62,7 +62,7 @@
   transform: translate(-50%, 0%);
 }
 
-#_volunteers, #_contact, #_home {
+#_volunteers, #_contact, #_home, #_events {
   cursor: pointer;
   font-size: 2vh;
   color: rgba(255, 255, 255, .5);
@@ -174,7 +174,7 @@ a {
   margin-left: 1vh;
 }
 
-#overlay_contacts, #overlay_volunteers {
+#overlay_contacts, #overlay_volunteers, #overlay_events {
   position: fixed;
   display: none;
   width: 100%;

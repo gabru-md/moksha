@@ -15,11 +15,17 @@
         {{moksha-contact heads=this.model.heads}}
     </div>
 </div>
+<div id="overlay_events">
+    <div class="moksha-events">
+        {{events-component events=this.model.events}}
+    </div>
+</div>
 
 <header class="masthead mb-auto hold" style="position: fixed">
     <div class="inner">
         <nav class="nav nav-masthead navcss">
             <a class="nav-link active" id="_home" onclick="on_home()">Home</a>
+            <a class="nav-link" id="_events" onclick="on_events()">Events</a>
             <a class="nav-link" id="_volunteers" onclick="on_volunteers()">Volunteers</a>
             <a class="nav-link" id="_contact" onclick="on_contacts()">Contact</a>
         </nav>
