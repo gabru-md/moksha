@@ -1,8 +1,6 @@
-<h1>{{name}}</h1>
-<ul>
-    {{#each events as |event|}}
-        {{#if (eq event.eventType type)}}
-            <li>{{event.eventName}}</li>
-        {{/if}}
-    {{/each}}
-</ul>
+<div>
+    {{scrollable-events name=name type=type events=events}}
+</div>
+<div>
+    {{event-data type=type name=name events=events}}
+</div>

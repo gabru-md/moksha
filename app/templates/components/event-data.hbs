@@ -1,0 +1,7 @@
+<ul>
+    {{#each events as |event|}}
+        {{#if (eq event.eventType type)}}
+            <li>{{event.eventDescription}}</li>
+        {{/if}}
+    {{/each}}
+</ul>
