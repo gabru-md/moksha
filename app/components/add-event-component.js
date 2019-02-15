@@ -15,7 +15,7 @@ export default Component.extend({
         createEvent() {
             var event = {};
             let normalizeType = (str) => {
-                return str.toLowerCase().toUpperCase()
+                return str.toLowerCase()
             }
             event.eventName = this.eventName;
             event.eventEmail = this.eventEmail;
