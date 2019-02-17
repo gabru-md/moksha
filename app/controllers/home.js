@@ -5,7 +5,7 @@ export default Controller.extend({
     eventType : '',
     actions : {
         changeEventController(eventHandler) {
-            console.log(eventHandler.target.value);
+            console.log(eventHandler);
             this.set('displayEvent',eventHandler.target.value);
             this.set('eventType', eventHandler.target.type);
         }

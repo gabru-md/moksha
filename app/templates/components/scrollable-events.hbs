@@ -1,8 +1,35 @@
 <h1>{{name}}</h1>
-<ul>
-    {{#each events as |event|}}
-        {{#if (eq event.eventType type)}}
-            <button value={{event.eventName}} type={{event.eventType}} onclick={{fireAction}}>{{event.eventName}}</button>
+<div class="row">
+    <div class="scrollable-events col-sm-4 d-none d-lg-block">
+        <div style="display: block" class="card-deck">
+            <div class="container">
+
+            {{#each events as |event|}}
+            {{#if (eq event.eventType type)}}
+            <button class="card orange-card" onclick={{fireAction}}>
+                <div class="text-white d-flex rgba-black-strong py-5 px-4">
+                    <div class="card-text" value={{event.eventName}} type={{event.eventType}}>
+                        <h3 class="card-title pt-2"><strong>
+                                <h1>{{event.eventName}}</h1>
+                            </strong>
+                        </h3>
+                    </div>
+                </div>
+            </button>
+            {{!-- <button value={{event.eventName}} type={{event.eventType}} onclick={{fireAction}}>
+            {{event.eventName}}
+        </button> --}}
+            {{/if}}
+            {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="static-details col-sm-8 d-none d-lg-block">
+        {{#each events as |event|}}
+        {{#if (eq event.eventName displayEvent)}}
+        {{event.eventDescription}}
+        <a href={{event.eventRegLink}}>Register</a>
         {{/if}}
-    {{/each}}
-</ul>
+        {{/each}}
+    </div>
+</div>

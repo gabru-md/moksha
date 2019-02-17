@@ -4,21 +4,40 @@
 </div>
 
 {{!-- <div class="text-center top home-component"> --}}
-    {{!-- </div> --}}
-<div id="overlay_volunteers">
+{{!-- </div> --}}
+{{!-- <div id="overlay_volunteers">
     <div class="moksha-volunteers">
         {{moksha-volunteers departments=this.model.departments}}
     </div>
-</div>
+</div> --}}
 <div id="overlay_contacts">
     <div class="moksha-contacts">
         {{moksha-contact heads=this.model.heads}}
     </div>
 </div>
 <div id="overlay_events">
-    <div class="moksha-events">
-        {{moksha-events events=this.model.events fireAction=(action 'changeEventController') displayEvent=displayEvent}}
+    <div>
+        {{events-minimal}}
     </div>
+</div>
+<div id="super_overlay_events">
+        {{moksha-events events=this.model.events fireAction=(action 'changeEventController') displayEvent=displayEvent}}
+
+    {{!-- <header class="masthead mb-auto hold" style="position: fixed">
+        <div class="inner">
+            <nav class="nav nav-masthead" id="navcss2">
+                <a onclick="changeView(this)" value="_pronite" class="nav-link">Pronite</a>
+                <a onclick="changeView(this)" value="_music" class="nav-link">Music</a>
+                <a onclick="changeView(this)" value="_dance" class="nav-link">Dance</a>
+                <a onclick="changeView(this)" value="_theatre" class="nav-link">Theatre</a>
+                <a onclick="changeView(this)" value="_gaming" class="nav-link">Gaming</a>
+                <a onclick="changeView(this)" value="_literary" class="nav-link">Literary</a>
+                <a onclick="changeView(this)" value="_talent" class="nav-link">Talent</a>
+                <a onclick="changeView(this)" value="_informal" class="nav-link">Informal</a>
+                <a onclick="changeView(this)" value="_automobile" class="nav-link">Automobile</a>
+            </nav>
+        </div>
+    </header> --}}
 </div>
 
 <header class="masthead mb-auto hold" style="position: fixed">
@@ -26,7 +45,7 @@
         <nav class="nav nav-masthead navcss">
             <a class="nav-link active" id="_home" onclick="on_home()">Home</a>
             <a class="nav-link" id="_events" onclick="on_events()">Events</a>
-            <a class="nav-link" id="_volunteers" onclick="on_volunteers()">Volunteers</a>
+            {{!-- <a class="nav-link" id="_volunteers" onclick="on_volunteers()">Volunteers</a> --}}
             <a class="nav-link" id="_contact" onclick="on_contacts()">Contact</a>
         </nav>
     </div>
