@@ -17,7 +17,7 @@
 </div>
 <div id="overlay_events">
     <div class="moksha-events">
-        {{moksha-events events=this.model.events}}
+        {{moksha-events events=this.model.events fireAction=(action 'changeEventController') displayEvent=displayEvent}}
     </div>
 </div>
 

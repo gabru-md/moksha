@@ -121,9 +121,37 @@ function on_events() {
     document.getElementById("overlay_events").style.display = "block";
     applyprop("_events");
   }, 300);
+  hideAllInitially();
 }
 
 function off_events() {
   document.getElementById("overlay_events").style.display = "none";
+  hideAllInitially();
   applyprop("_home");
 }
+
+let  hideAllEventsExcept = (id) => {
+  var arr = ["_pronite","_music","_dance","_theatre","_literary","_gaming","_talent","_informal","_automobile"];
+  arr.forEach(element => {
+    if(element === id) {
+      document.getElementById(element).style.display="block";
+    }else{
+    document.getElementById(element).style.display="none";
+    }
+  });
+}
+let hideAllInitially = () => {
+  var arr = ["_pronite","_music","_dance","_theatre","_literary","_gaming","_talent","_informal","_automobile"];
+  arr.forEach(element => {
+    document.getElementById(element).style.display="none";
+  });
+}
+
+function changeView(element) {
+  hideAllEventsExcept(element.value);
+}
+
+
+// initial
+
+hideAllInitially();

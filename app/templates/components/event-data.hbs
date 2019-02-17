@@ -1,7 +1,8 @@
 <ul>
     {{#each events as |event|}}
-        {{#if (eq event.eventType type)}}
+        {{#if (eq event.eventName displayEvent)}}
             <li>{{event.eventDescription}}</li>
+            <a href={{event.eventRegLink}}>Register</a>
         {{/if}}
     {{/each}}
 </ul>

@@ -2,7 +2,7 @@
 <ul>
     {{#each events as |event|}}
         {{#if (eq event.eventType type)}}
-            <li>{{event.eventName}}</li>
+            <button value={{event.eventName}} type={{event.eventType}} onclick={{fireAction}}>{{event.eventName}}</button>
         {{/if}}
     {{/each}}
 </ul>
