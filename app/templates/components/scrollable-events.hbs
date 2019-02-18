@@ -1,6 +1,6 @@
-<h1>{{name}}</h1>
+<h2>{{name}}</h2>
 <div class="row">
-    <div class="scrollable-events col-sm-4 d-none d-lg-block">
+    <div class="scrollable-events col-sm-4" id="scroll">
         <div style="display: block" class="card-deck">
             <div class="container">
 
@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-    <div class="static-details col-sm-8 d-none d-lg-block">
+    <div class="static-details col-sm-8" id="data">
         {{#each events as |event|}}
         {{#if (eq event.eventName displayEvent)}}
         {{event.eventDescription}}
