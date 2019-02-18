@@ -23,6 +23,12 @@ let applyprop = (a) => {
   document.getElementById(a).style.color = "white";
   document.getElementById(a).style.borderBottomColor = "white";
   document.getElementsByClassName("nav").focus = "auto";
+
+  document.getElementById("data").classList.remove("d-block");
+  document.getElementById("data").classList.add("d-sm-none", "d-md-block");
+  document.getElementById("scroll").classList.remove("d-sm-none");
+  document.getElementById("scroll").classList.remove("d-md-block");
+  document.getElementById("scroll").classList.add("d-block");
 }
 
 let applyprop2 = (a) => {
@@ -162,13 +168,15 @@ let hideAllInitially = () => {
   });
 }
 
+// **Trigger on {{fireaction}}** //
 on_events_detail = () => {
   off_overlay("overlay_events");
   on_overlay("super_overlay_events");
+  document.getElementById("scroll").classList.remove("d-block");
+  document.getElementById("scroll").classList.add("d-sm-none", "d-md-block");
   document.getElementById("data").classList.remove("d-sm-none");
-  document.getElementById("data").classList.add("d-none");
-  document.getElementById("scroll").classList.remove("d-none");
-  document.getElementById("scroll").classList.add("d-sm-none");
+  document.getElementById("data").classList.remove("d-md-block");
+  document.getElementById("data").classList.add("d-block");
   off_overlay("back");
 }
 
@@ -177,10 +185,11 @@ function changeView(element) {
   // showNav2();
   on_events_detail();
   hideAllEventsExcept(element.value);
+  document.getElementById("data").classList.remove("d-block");
+  document.getElementById("data").classList.add("d-sm-none", "d-md-block");
   document.getElementById("scroll").classList.remove("d-sm-none");
-  document.getElementById("scroll").classList.add("d-none");
-  document.getElementById("data").classList.remove("d-none");
-  document.getElementById("data").classList.add("d-sm-none");
+  document.getElementById("scroll").classList.remove("d-md-block");
+  document.getElementById("scroll").classList.add("d-block");
 }
 
 back = () => {

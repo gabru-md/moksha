@@ -55,3 +55,22 @@
 button {
   align-items: center;
 }
+
+#data{
+  overflow-x: auto;
+  height: 72vh;
+  scrollbar-width: none;
+}
+
+
+.scrollable-events{
+  overflow-y: auto;
+  text-align: right;
+  height: 72vh;
+  -ms-overflow-style: none;  // IE 10+
+  scrollbar-width: none;
+}
+
+.scrollable-events::-webkit-scrollbar { 
+  display: none;  // Safari and Chrome
+}
