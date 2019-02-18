@@ -6,9 +6,9 @@
 
             {{#each events as |event|}}
             {{#if (eq event.eventType type)}}
-            <button class="card orange-card" onclick={{fireAction}}>
+            <button class="card orange-card" onclick={{fireAction}} value={{event.eventName}} type={{event.eventType}}>
                 <div class="text-white d-flex rgba-black-strong py-5 px-4">
-                    <div class="card-text" value={{event.eventName}} type={{event.eventType}}>
+                    <div class="card-text" >
                         <h3 class="card-title pt-2"><strong>
                                 <h1>{{event.eventName}}</h1>
                             </strong>
@@ -25,11 +25,6 @@
         </div>
     </div>
     <div class="static-details col-sm-8" id="data">
-        {{#each events as |event|}}
-        {{#if (eq event.eventName displayEvent)}}
-        {{event.eventDescription}}
-        <a href={{event.eventRegLink}}>Register</a>
-        {{/if}}
-        {{/each}}
+        {{event-data events=events displayEvent=displayEvent}}
     </div>
 </div>
