@@ -1,9 +1,9 @@
 <div class="scrollable-events col-sm-8 d-none d-lg-block">
     {{#each events as |event|}}
         {{#if (eq event.eventName displayEvent)}}
+            <h2>{{event.eventName}}</h2>
             {{{desc-helper event.eventDescription}}}
-            {{#if (eq event.eventRegLink "None")}}
-            {{else}}
+            {{#if (exists event.eventRegLink)}}
                 <a href={{event.eventRegLink}}>Register</a>
             {{/if}}
         {{/if}}
