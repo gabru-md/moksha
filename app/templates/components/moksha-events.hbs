@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 {{!-- <div>
     <button onclick="changeView(this)" value="_pronite">Pronite</button>
-=======
-<div>
-    <!--<button onclick="changeView(this)" value="_pronite">Pronite</button>-->
->>>>>>> 7eb7ae06a7d3600fb9741eb9596473b4ed4c827f
     <button onclick="changeView(this)" value="_music">Music</button>
     <button onclick="changeView(this)" value="_dance">Dance</button>
     <button onclick="changeView(this)" value="_theatre">Theatre</button>
@@ -13,13 +8,9 @@
     <button onclick="changeView(this)" value="_talent">Talent</button>
     <button onclick="changeView(this)" value="_automobile">Automobile</button>
     <button onclick="changeView(this)" value="_informal">Informal</button>
-<<<<<<< HEAD
 
 </div> --}}
 
-=======
-</div>
->>>>>>> 7eb7ae06a7d3600fb9741eb9596473b4ed4c827f
 <div id="_pronite">
     {{event-categories type="pronite" name="Pronites" events=events fireAction=fireAction}}
 </div>
@@ -36,16 +27,16 @@
     {{event-categories type="gaming" name="Gaming" events=events fireAction=fireAction}}
 </div>
 <div id="_literary">
-    {{event-categories type="literary" name="Literary Events" events=events fireAction=fireAction}}
+    {{event-categories name="literary" name="Literary Events" events=events fireAction=fireAction}}
 </div>
 <div id="_talent">
-    {{event-categories type="talent" name="Talent Show" events=events fireAction=fireAction}}
+    {{event-categories name="talent" name="Talent Show" events=events fireAction=fireAction}}
 </div>
 <div id="_automobile">
-    {{event-categories type="automobile" name="Automobile Shows" events=events fireAction=fireAction}}
+    {{event-categories name="automobile" name="Automobile Shows" events=events fireAction=fireAction}}
 </div>
 <div id="_informal">
-    {{event-categories type="informal" name="Informal Events" events=events fireAction=fireAction}}
+    {{event-categories name="informal" name="Informal Events" events=events fireAction=fireAction}}
 </div>
 <div>
     {{event-data events=events displayEvent=displayEvent}}
