@@ -2,7 +2,10 @@
     {{#each events as |event|}}
         {{#if (eq event.eventName displayEvent)}}
             {{{desc-helper event.eventDescription}}}
-        <a href={{event.eventRegLink}}>Register</a>
+            {{#if (eq event.eventRegLink "None")}}
+            {{else}}
+                <a href={{event.eventRegLink}}>Register</a>
+            {{/if}}
         {{/if}}
     {{/each}}
 </div> 
