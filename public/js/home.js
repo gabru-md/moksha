@@ -71,7 +71,7 @@ var flutter = setInterval(() => {
     x = 0;
     document.getElementById("logo2").hidden = true;
   }
-}, 300);
+}, Math.random()*200+200);
 
 function on_event_data() {
   off_overlay("overlay_events");
