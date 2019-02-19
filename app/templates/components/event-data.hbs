@@ -1,13 +1,15 @@
 {{!-- <div class="scrollable-events col-sm-8 d-none d-lg-block"> --}}
     {{#each events as |event|}}
         {{#if (eq event.eventName displayEvent)}}
-            <img src="https://www.guitarplayer.com/.image/t_share/MTUxNDE4Mjk4NjU5ODQxMjc5/image-placeholder-title.jpg" style="width: 100%;margin-bottom: 3%;">
+            <img src="/images/events/{{lowercase event.eventName}}.jpg" style="width: 100%;margin-bottom: 3%;">
             <h2 style="text-align: right">{{event.eventName}}</h2>
             {{{desc-helper event.eventDescription}}}
             {{#if (exists event.eventRegLink)}}
-            <button class="register">
-                <a href={{event.eventRegLink}} style="">Register</a>
-            </button>
+            <a href={{event.eventRegLink}} target="_blank" style="text-decoration: none">
+                <button class="register">
+                    Register
+                </button>
+                </a>
             {{/if}}
         {{/if}}
     {{/each}}
