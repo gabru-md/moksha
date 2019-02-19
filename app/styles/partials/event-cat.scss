@@ -62,6 +62,9 @@ button {
   scrollbar-width: none;
 }
 
+#data::-webkit-scrollbar { 
+  display: none;  // Safari and Chrome
+}
 
 .scrollable-events{
   overflow-y: auto;

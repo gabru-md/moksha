@@ -1,8 +1,13 @@
 {{!-- <div class="scrollable-events col-sm-8 d-none d-lg-block"> --}}
     {{#each events as |event|}}
         {{#if (eq event.eventName displayEvent)}}
+<<<<<<< HEAD
             <img src="/images/events/{{lowercase event.eventName}}.jpg" style="width: 100%;margin-bottom: 3%;">
             <h2 style="text-align: right">{{event.eventName}}</h2>
+=======
+            <img src="https://www.guitarplayer.com/.image/t_share/MTUxNDE4Mjk4NjU5ODQxMjc5/image-placeholder-title.jpg" style="width: 100%;margin-bottom: 3%;">
+            <h1 style="text-align: right">{{event.eventName}}</h1>
+>>>>>>> aa62ac10adba96d48eba2ec8407999274f9480dc
             {{{desc-helper event.eventDescription}}}
             {{#if (exists event.eventRegLink)}}
             <a href={{event.eventRegLink}} target="_blank" style="text-decoration: none">
