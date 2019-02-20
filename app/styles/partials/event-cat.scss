@@ -81,3 +81,47 @@ button {
 .pd-font-h1 {
   font-size: 34px;
 }
+
+@media screen and (min-width: 501px) {
+  .mobile-col {
+    display: none;
+  }
+  .laptop-col {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mobile-col {
+    display: block;
+  }
+  .laptop-col {
+    display: none;
+  }
+  .events-container {
+    margin-left: -20px !important;
+  }
+  #overlay_events {
+    left: 10%;
+  }
+  #data-mob{
+    overflow-x: auto;
+    height: 72vh;
+    padding-left: 30px;
+    width: 85%;
+    top: 0;
+    scrollbar-width: none;
+  }
+  .register {
+    left: 30%;
+  }
+  .scrollable-events {
+    padding-left: 15px;
+  }
+  .mob-font-h2 {
+    font-size: 30px !important;
+  }
+  .mob-font-p {
+    font-size: 15px !important;
+  }
+}
