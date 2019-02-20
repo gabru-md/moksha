@@ -5,8 +5,6 @@ export default Controller.extend({
     eventType : '',
     actions : {
         changeEventController(event) {
-            console.log(event.target.value);
-            console.log(event);
             if(event.path){
                 console.log('chrome');
                 var val = event.path[5].value;
@@ -18,6 +16,9 @@ export default Controller.extend({
                 this.set('displayEvent',event.target.value);
                 this.set('eventType', event.target.type);
             }
+        },
+        changeEventControllerMinimal() {
+            this.set('displayEvent', '');
         }
     }
 });

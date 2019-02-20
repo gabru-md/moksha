@@ -216,10 +216,10 @@ a {
 #super_overlay_events{
   position: fixed;
   display: none;
-  width: 90%;
+  width: 100%;
   height: 85%;
   top: 12%;
-  left: 7%;
+  left: 5.5%;
   right: 0;
   bottom: 0;
   color: white;
@@ -266,7 +266,7 @@ a {
     font-style: normal;
 }
 
-#register {
+.register {
   color: white;
   font-weight: bold;
 }

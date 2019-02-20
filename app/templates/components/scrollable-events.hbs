@@ -1,4 +1,4 @@
-<h2>{{name}}</h2>
+<h2 style="font-size: 48px">{{name}}</h2>
 <div class="row">
     <div class="scrollable-events col-sm-3 d-block" id="scroll">
         <div style="display: block" class="card-deck">
@@ -6,12 +6,12 @@
 
             {{#each events as |event|}}
             {{#if (eq event.eventType type)}}
-            <button class="card orange-card cat-events" onclick={{fireAction}} value={{event.eventName}} type={{event.eventType}}>
+            <button class="card orange-card cat-events" style="background: url('/images/events/{{lowercase event.eventName}}.jpg');" onclick={{fireAction}} value={{event.eventName}} type={{event.eventType}}>
                 <div class="text-white d-flex rgba-black-strong py-5 px-4">
                     <div class="card-text" >
                         <h3 class="card-title pt-2">
                             <strong>
-                                <h1>{{main-name event.eventName}}</h1>
+                                <h1 style="font-size: 34px;">{{main-name event.eventName}}</h1>
                             </strong>
                         </h3>
                     </div>
