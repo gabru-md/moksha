@@ -1,5 +1,5 @@
 import DS from 'ember-data';
-const { Model, attr } = DS;
+const { attr } = DS;
 
 export default DS.Model.extend({
     eventEmail : attr('string'),

@@ -183,6 +183,10 @@ on_events_detail = () => {
 function changeView(element) {
   // on_event_data();
   // showNav2();
+  console.log(window.innerWidth);
+  if(window.innerWidth <= 500) {
+    console.log('mobile view');
+  }
   on_events_detail();
   hideAllEventsExcept(element.value);
   document.getElementById("data").classList.remove("d-block");

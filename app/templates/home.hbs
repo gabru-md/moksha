@@ -21,7 +21,7 @@
     </div>
 </div>
 <div id="super_overlay_events">
-        {{moksha-events events=this.model.events fireAction=(action 'changeEventController') displayEvent=displayEvent}}
+        {{moksha-events events=this.model.events fireAction=(action 'changeEventController') displayEvent=displayEvent disp_cat=disp_cat disp_eve=disp_eve goBack=(action 'changeEventControllerMinimal')}}
 
     {{!-- <header class="masthead mb-auto hold" style="position: fixed">
         <div class="inner">

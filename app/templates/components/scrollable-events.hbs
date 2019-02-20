@@ -1,32 +1,67 @@
-<h2 style="font-size: 48px">{{name}}</h2>
-<div class="row">
-    <div class="scrollable-events col-sm-3 d-block" id="scroll">
-        <div style="display: block" class="card-deck">
-            <div class="container">
+<div class="laptop-col">
+    <h2 style="font-size: 48px">{{name}}</h2>
+    <div class="row">
+        <div class="scrollable-events col-sm-3 d-block" id="scroll">
+            <div style="display: block" class="card-deck">
+                <div class="container">
 
-            {{#each events as |event|}}
-            {{#if (eq event.eventType type)}}
-            <button class="card orange-card cat-events" style="background: url('/images/events/{{lowercase event.eventName}}.jpg');" onclick={{fireAction}} value={{event.eventName}} type={{event.eventType}}>
-                <div class="text-white d-flex rgba-black-strong py-5 px-4">
-                    <div class="card-text" >
-                        <h3 class="card-title pt-2">
-                            <strong>
-                                <h1 style="font-size: 34px;">{{main-name event.eventName}}</h1>
-                            </strong>
-                        </h3>
+                {{#each events as |event|}}
+                {{#if (eq event.eventType type)}}
+                <button class="card orange-card cat-events" style="background: url('/images/events/{{lowercase event.eventName}}.jpg');" onclick={{fireAction}} value={{event.eventName}} type={{event.eventType}}>
+                    <div class="text-white d-flex rgba-black-strong py-5 px-4">
+                        <div class="card-text" >
+                            <h3 class="card-title pt-2">
+                                <strong>
+                                    <h1 style="font-size: 34px;">{{main-name event.eventName}}</h1>
+                                </strong>
+                            </h3>
+                        </div>
                     </div>
+                </button>
+                {{!-- <button value={{event.eventName}} type={{event.eventType}} onclick={{fireAction}}>
+                {{event.eventName}}
+            </button> --}}
+                {{/if}}
+                {{/each}}
                 </div>
-            </button>
-            {{!-- <button value={{event.eventName}} type={{event.eventType}} onclick={{fireAction}}>
-            {{event.eventName}}
-        </button> --}}
-            {{/if}}
-            {{/each}}
             </div>
         </div>
+        <div class="col-sm-1"></div>
+        <div class="static-details col-sm-6 d-sm-none d-md-block" id="data">
+            {{event-data events=events displayEvent=displayEvent}}
+        </div>
     </div>
-    <div class="col-sm-1"></div>
-    <div class="static-details col-sm-6 d-sm-none d-md-block" id="data">
-        {{event-data events=events displayEvent=displayEvent}}
+</div>
+<div class="mobile-col">
+    <h2 style="font-size: 35px; margin-left: 3%;" style="cursor: pointer" onclick={{goBack}}>{{name}}</h2>
+    <div class="row">
+        <div class="scrollable-events col-sm-3" style="display: {{if disp_cat "block" "none"}}" id="scroll-mob">
+            <div style="display: block" class="card-deck">
+                <div class="container events-container">
+
+                {{#each events as |event|}}
+                {{#if (eq event.eventType type)}}
+                <button class="card orange-card cat-events" style="background: url('/images/events/{{lowercase event.eventName}}.jpg');" onclick={{fireAction}} value={{event.eventName}} type={{event.eventType}}>
+                    <div class="text-white d-flex rgba-black-strong py-5 px-4">
+                        <div class="card-text" >
+                            <h3 class="card-title pt-2">
+                                <strong>
+                                    <h1 style="font-size: 30px;">{{main-name event.eventName}}</h1>
+                                </strong>
+                            </h3>
+                        </div>
+                    </div>
+                </button>
+                {{!-- <button value={{event.eventName}} type={{event.eventType}} onclick={{fireAction}}>
+                {{event.eventName}}
+            </button> --}}
+                {{/if}}
+                {{/each}}
+                </div>
+            </div>
+        </div>
+        <div  style="display: {{if disp_eve "block" "none"}}" class="static-details-mob col-sm-6 d-md-block" id="data-mob">
+            {{event-data events=events displayEvent=displayEvent}}
+        </div>
     </div>
 </div>
