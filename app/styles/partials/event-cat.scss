@@ -1,0 +1,83 @@
+#pronite {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/pronite.jpg');
+  background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/pronite.jpg');
+}
+
+#talent {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/talent.jpg');
+  background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/talent.jpg');
+}
+
+#music {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/music.jpg');
+  background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/music.jpg');
+}
+
+#dance {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/dance.jpg');
+  background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/dance.jpg');
+}
+
+#theatre {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/theatre.jpg');
+  background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/theatre.jpg');
+}
+
+#gaming {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/gaming.jpg');
+  background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/gaming.jpg');
+}
+
+#literary {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/literary.jpg');
+  background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/literary.jpg');
+}
+
+#automobile {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/automobile.jpg');
+  background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/automobile.jpg');
+}
+
+#informal {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/informal.jpg');
+  background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url('/images/event-cat/informal.jpg');
+}
+.cat-events {
+  text-align: center;
+  align-items: center;
+  background-position: center !important;
+  background-size: cover !important;
+  border: none;
+  height: 22vh !important;
+}
+
+
+button {
+  align-items: center;
+}
+
+#data{
+  overflow-x: auto;
+  height: 72vh;
+  scrollbar-width: none;
+}
+
+#data::-webkit-scrollbar { 
+  display: none;  // Safari and Chrome
+}
+
+.scrollable-events{
+  overflow-y: auto;
+  text-align: right;
+  height: 72vh;
+  -ms-overflow-style: none;  // IE 10+
+  scrollbar-width: none;
+}
+
+.scrollable-events::-webkit-scrollbar { 
+  display: none;  // Safari and Chrome
+}
+
+.pd-font-h1 {
+  font-size: 34px;
+}

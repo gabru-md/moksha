@@ -1,0 +1,18 @@
+{{!-- <div class="scrollable-events col-sm-8 d-none d-lg-block"> --}}
+    {{#each events as |event|}}
+        {{#if (eq event.eventName displayEvent)}}
+            <div>
+            <img src="/images/events/{{lowercase event.eventName}}.jpg" style="width: 100%;margin-bottom: 3%; max-height: 580px;" />
+            </div>
+            <h2 style="text-align: right; font-size: 48px;">{{allcaps event.eventName}}</h2>
+            <p style="font-size: 20px;">{{{desc-helper event.eventDescription}}}</p>
+            {{#if (exists event.eventRegLink)}}
+            <a href={{event.eventRegLink}} target="_blank" style="text-decoration: none">
+                <button class="register">
+                    Register
+                </button>
+            </a>
+            {{/if}}
+        {{/if}}
+    {{/each}}
+{{!-- </div>  --}}

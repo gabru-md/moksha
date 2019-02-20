@@ -14,6 +14,9 @@ export default Component.extend({
     actions : {
         createEvent() {
             var event = {};
+            let normalizeType = (str) => {
+                return str.toLowerCase()
+            }
             event.eventName = this.eventName;
             event.eventEmail = this.eventEmail;
             event.eventHead = this.eventHead;
@@ -22,7 +25,7 @@ export default Component.extend({
             event.society = this.society;
             event.eventDescription = this.eventDescription;
             event.eventVenue = this.eventVenue;
-            event.eventType = this.eventType;
+            event.eventType = normalizeType(this.eventType);
             event.eventRegLink = this.eventRegLink;
 
             this.get('addEvent')(event);

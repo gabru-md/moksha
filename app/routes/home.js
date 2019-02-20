@@ -1,9 +1,11 @@
 import Route from '@ember/routing/route';
+import RSVP from 'rsvp';
 
 export default Route.extend({
-
   model() {
-    return {
+    var events = this.get('store').findAll('events');
+    return RSVP.hash({
+      events : events,
       heads : [
         {
           name : 'Pranav Rastogi',
@@ -114,7 +116,6 @@ export default Route.extend({
           google_link : 'https://docs.google.com/forms/d/e/1FAIpQLScgBe8nRNB1vR7tFi9YsKYShT9qCxssAiUtO6qo4817vSKhUg/viewform?usp=sf_link'
         }
       ]
-    }
+    });
   }
-
 });
