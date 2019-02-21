@@ -4,7 +4,17 @@ let off_overlay = (b) => {
 
 let on_overlay = (b) => {
   document.getElementById(b).style.display = "block";
+  window.history.pushState({'sv':'#rv'}, '', '/#/home');
 }
+window.addEventListener("popstate", function(e) {
+  var events = document.getElementById('_events');
+  var home = document.getElementById('_home');
+  if (events.style.color === "white") {
+    events.click();
+  }else{
+    home.click();
+  }
+});
 
 var countDownDate = new Date("Mar 14, 2019 00:00:01").getTime();
 
