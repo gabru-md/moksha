@@ -3,19 +3,13 @@
 }
 
 .orange-card, .register {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url();
+    background: rgba(255, 136, 0, 0.2);
     height: 100% !important;
     width: 90%;
     margin: 5%;
 }
 
-.orange-card{
-    background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url("https://www.guitarplayer.com/.image/t_share/MTUxNDE4Mjk4NjU5ODQxMjc5/image-placeholder-title.jpg");
-    background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.1)), url("https://www.guitarplayer.com/.image/t_share/MTUxNDE4Mjk4NjU5ODQxMjc5/image-placeholder-title.jpg");
-}
-
 .register{
-    background: rgba(255, 136, 0, 0.541);
     width: auto;
     display: block;
     position: relative;
