@@ -89,6 +89,9 @@ button {
   .laptop-col {
     display: block;
   }
+  .h5-mob-col {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -115,13 +118,16 @@ button {
   .register {
     left: 30%;
   }
-  .scrollable-events {
-    padding-left: 15px;
-  }
   .mob-font-h2 {
-    font-size: 30px !important;
+    font-size: 25px !important;
   }
   .mob-font-p {
     font-size: 15px !important;
+  }
+  .h5-mob-col {
+    font-size: 1rem;
+  }
+  #overlay_events {
+    left: 7%;
   }
 }

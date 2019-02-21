@@ -9,8 +9,27 @@ let on_overlay = (b) => {
 window.addEventListener("popstate", function(e) {
   var events = document.getElementById('_events');
   var home = document.getElementById('_home');
+  var data = document.getElementById('data');
+  var data_mob = document.getElementById('data-mob');
+  var arr = ["_pronite", "_music", "_dance", "_theatre", "_literary", "_gaming", "_talent", "_informal", "_automobile"];
   if (events.style.color === "white") {
-    events.click();
+    if(data.getElementsByTagName('img').length === 0 
+      &&
+      data_mob.getElementsByTagName('img').length === 0) {
+      offExcept(events);
+    }else{
+    arr.forEach(element => {
+      var el = document.getElementById(element);
+      if(el.style.display === "block") {
+        offExcept(events, true);
+        console.log(el);
+        console.log(element.split('_')[1]);
+        document.getElementById(element.split('_')[1]).click();
+        return;
+      }
+    });
+  }
+    //events.click();
   }else{
     home.click();
   }
@@ -58,7 +77,7 @@ let unblurit = () => {
   document.getElementById("bg-img").classList.remove("blur");
 }
 
-let offExcept = ele => {
+let offExcept = (ele, fast=false) => {
   val = ele.getAttribute("value");
   let arr = ["overlay_volunteers", "overlay_events", "overlay_contacts", "super_overlay_events"];
   let arr2=[ "_home", "_volunteers", "_events", "_contact"];
@@ -76,7 +95,8 @@ let offExcept = ele => {
   else{
     blurit(val);
   }
-  setTimeout(() => {
+
+  if(fast) {
     arr.forEach(element =>{
       if(element===val){
         on_overlay(element);
@@ -86,16 +106,28 @@ let offExcept = ele => {
         off_overlay(element);
       }
     })
-  }, 300);
+  }else{
+    setTimeout(() => {
+      arr.forEach(element =>{
+        if(element===val){
+          on_overlay(element);
+          document.getElementById(ele.id).style.color = "white";
+        }
+        else{
+          off_overlay(element);
+        }
+      })
+    }, 300);
+  }
 }
 
 let hideAllEventsExcept = (id) => {
   var arr = ["_pronite", "_music", "_dance", "_theatre", "_literary", "_gaming", "_talent", "_informal", "_automobile"];
-  off_overlay("back");
+ //off_overlay("back");
   arr.forEach(element => {
     if (element === id) {
       document.getElementById(element).style.display = "block";
-      on_overlay("back");
+     //on_overlay("back");
     } else {
       document.getElementById(element).style.display = "none";
     }
@@ -112,7 +144,7 @@ let hideAllInitially = () => {
 on_events_detail = () => {
   off_overlay("overlay_events");
   on_overlay("super_overlay_events");
-  off_overlay("back");
+ //off_overlay("back");
 }
 
 function changeView(element) {
@@ -129,14 +161,45 @@ back = () => {
   document.getElementById("scroll").classList.add("d-none");
   document.getElementById("data").classList.remove("d-none");
   document.getElementById("data").classList.add("d-sm-none");
-  off_overlay("back");
+ //off_overlay("back");
 }
 change = (element) => {
   changeView(element);
-  off_overlay("back");
+ //off_overlay("back");
 }
 
 // initial
 
 hideAllInitially();
-off_overlay("back");
+//off_overlay("back");
+function check_url(){
+  var loc = window.location.href;
+  if(loc.split('?').length > 1) {
+    arr = loc.split('?')[1].split('&');
+    event_cat = decodeURI(arr[0].split('=')[1]);
+    event_name = decodeURI(arr[1].split('=')[1]);
+    console.log(event_cat);
+    console.log(event_name);
+    events = document.getElementById('_events'); 
+    offExcept(events, true);
+    if(document.getElementById(event_cat)){
+      document.getElementById(event_cat).click();
+      cat_div = document.getElementById("_" + event_cat);
+      btns = cat_div.getElementsByTagName('button');
+      setTimeout(function(){
+        btns = Array.prototype.slice.call(btns);
+        btns.forEach(element => {
+          if(element.value.toLowerCase().startsWith(event_name.toLowerCase())) {
+            element.click();
+            return;
+          }
+        });
+      }, 300);
+      
+      //document.getElementById('_home').click();
+    }
+    return;
+  }
+}
+
+check_url();
