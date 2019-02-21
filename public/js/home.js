@@ -1,50 +1,9 @@
-let applydefault = (b) => {
-  document.getElementById(b).style.color = "rgba(255, 255, 255, .5)";
-  document.getElementById(b).style.borderBottomColor = "transparent";
-}
-
 let off_overlay = (b) => {
   document.getElementById(b).style.display = "none";
 }
 
 let on_overlay = (b) => {
   document.getElementById(b).style.display = "block";
-}
-
-let on_overlay2 = (b) => {
-  document.getElementById(b).style.display = "flex";
-}
-
-let applyprop = (a) => {
-  document.getElementsByClassName("nav").focus = "none";
-  applydefault("_home");
-  applydefault("_events");
-  applydefault("_contact");
-  document.getElementById(a).style.color = "white";
-  document.getElementById(a).style.borderBottomColor = "white";
-  document.getElementsByClassName("nav").focus = "auto";
-
-  document.getElementById("data").classList.remove("d-block");
-  document.getElementById("data").classList.add("d-sm-none", "d-md-block");
-  document.getElementById("scroll").classList.remove("d-sm-none");
-  document.getElementById("scroll").classList.remove("d-md-block");
-  document.getElementById("scroll").classList.add("d-block");
-}
-
-let applyprop2 = (a) => {
-  document.getElementsByClassName("nav").focus = "none";
-  applydefault("_pronite");
-  applydefault("_theatre");
-  applydefault("_talent");
-  applydefault("_music");
-  applydefault("_gaming");
-  applydefault("_automobile");
-  applydefault("_dance");
-  applydefault("_literary");
-  applydefault("_informal");
-  document.getElementById(a).style.color = "white";
-  document.getElementById(a).style.borderBottomColor = "white";
-  document.getElementsByClassName("nav").focus = "auto";
 }
 
 var countDownDate = new Date("Mar 14, 2019 00:00:01").getTime();
@@ -79,74 +38,45 @@ var flutter = setInterval(() => {
   }
 }, Math.random()*200+200);
 
-function on_event_data() {
-  off_overlay("overlay_events");
-  on_overlay("super_overlay_events");
-  document.getElementById("navcss2").style.display = "flex";
-}
-
-// function off_event_data(){
-//   off_overlay("super_overlay_events");
-//   off_overlay("navcss2");
-// }
-
-function on_events() {
-  blurit();
-  setTimeout(function () {
-    off_contacts();
-    // off_event_data();
-    on_overlay("overlay_events");
-    applyprop("_events");
-    off_overlay("super_overlay_events");
-    off_overlay("back");
-  }, 300);
-  hideAllInitially();
-}
-
-function off_events() {
-  off_overlay("overlay_events");
-  applyprop("_home");
-}
-
-
-function on_contacts() {
-  blurit();
-  setTimeout(function () {
-    off_events();
-    off_overlay("super_overlay_events");
-    // off_event_data();
-    off_overlay("back");
-    on_overlay("overlay_contacts");
-    applyprop("_contact");
-  }, 300);
-}
-
-function off_contacts() {
-  off_overlay("overlay_contacts");
-  applyprop("_home");
-}
-
-function on_home() {
-  unblurit();
-  off_events();
-  off_contacts();
-  off_overlay("super_overlay_events");
-  // off_event_data();
-  off_overlay("back");
-  applyprop("_home");
-  // document.getElementById("_home").className = ".blur";
-
-}
-
 let blurit = () => {
   document.getElementById("bg-img").classList.remove("unblur");
   document.getElementById("bg-img").classList.add("blur");
-  // document.getElementById("bg-img").classList.add("overlay");
 }
 
 let unblurit = () => {
   document.getElementById("bg-img").classList.add("unblur");
   document.getElementById("bg-img").classList.remove("blur");
+}
+
+let offExcept = ele => {
+  val = ele.getAttribute("value");
+  let arr = ["overlay_volunteers", "overlay_events", "overlay_contacts", "super_overlay_events"];
+  let arr2=[ "_home", "_volunteers", "_events", "_contact"];
+  arr2.forEach(id =>{
+    document.getElementById(id).style.color = "rgba(255, 255, 255, .5)";
+  })
+  unblurit(val);
+  if(val==="overlay_home"){
+    arr.forEach(element =>{
+        off_overlay(element);
+    })
+    document.getElementById(ele.id).style.color = "white";
+    return;
+  } 
+  else{
+    blurit(val);
+  }
+  setTimeout(() => {
+    arr.forEach(element =>{
+      if(element===val){
+        on_overlay(element);
+        document.getElementById(ele.id).style.color = "white";
+      }
+      else{
+        off_overlay(element);
+      }
+    })
+  }, 300);
 }
 
 let hideAllEventsExcept = (id) => {
@@ -162,38 +92,26 @@ let hideAllEventsExcept = (id) => {
   });
 }
 let hideAllInitially = () => {
+  off_overlay("super_overlay_events");
   var arr = ["_pronite", "_music", "_dance", "_theatre", "_literary", "_gaming", "_talent", "_informal", "_automobile"];
   arr.forEach(element => {
     document.getElementById(element).style.display = "none";
   });
 }
 
-// **Trigger on {{fireaction}}** //
 on_events_detail = () => {
   off_overlay("overlay_events");
   on_overlay("super_overlay_events");
-  document.getElementById("scroll").classList.remove("d-block");
-  document.getElementById("scroll").classList.add("d-sm-none", "d-md-block");
-  document.getElementById("data").classList.remove("d-sm-none");
-  document.getElementById("data").classList.remove("d-md-block");
-  document.getElementById("data").classList.add("d-block");
   off_overlay("back");
 }
 
 function changeView(element) {
-  // on_event_data();
-  // showNav2();
   console.log(window.innerWidth);
   if(window.innerWidth <= 500) {
     console.log('mobile view');
   }
   on_events_detail();
   hideAllEventsExcept(element.value);
-  document.getElementById("data").classList.remove("d-block");
-  document.getElementById("data").classList.add("d-sm-none", "d-md-block");
-  document.getElementById("scroll").classList.remove("d-sm-none");
-  document.getElementById("scroll").classList.remove("d-md-block");
-  document.getElementById("scroll").classList.add("d-block");
 }
 
 back = () => {
@@ -203,7 +121,6 @@ back = () => {
   document.getElementById("data").classList.add("d-sm-none");
   off_overlay("back");
 }
-
 change = (element) => {
   changeView(element);
   off_overlay("back");
