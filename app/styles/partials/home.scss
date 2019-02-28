@@ -73,7 +73,11 @@
   transform: translate(-50%, 0%);
 }
 
-#_volunteers, #_contact, #_home, #_events{
+#_volunteers {
+  display: none;
+}
+
+ #_contact, #_home, #_events{
   display: flex;
   cursor: pointer;
   color: rgba(255, 255, 255, .5);
