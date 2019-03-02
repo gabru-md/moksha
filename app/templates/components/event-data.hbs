@@ -2,10 +2,10 @@
     {{#each events as |event|}}
         {{#if (eq event.eventName displayEvent)}}
             <div>
-            <img src="/images/events/{{lowercase event.eventName}}.jpg" style="width: 100%;margin-bottom: 3%; max-height: 580px;" />
+            <img src="/images/events/{{lowercase event.eventName}}.jpg" style="width: 100%;margin-bottom: 3%; max-height: 580px;" class="event-img" />
             </div>
             <h2 class="mob-font-h2" style="text-align: right; font-size: 48px;">{{allcaps event.eventName}}</h2>
-            <p class="mob-font-p" style="font-size: 20px;">{{{desc-helper event.eventDescription}}}</p>
+            <p class="mob-font-p" style="font-size: 20px;">{{desc-helper event.eventDescription}}</p>
             <p class="mob-font-p" style="font-size: 20px"><strong>Contact :<br>{{event.eventHead}}<br>{{event.eventHeadContact}}</strong></p>
             {{#if (exists event.eventRegLink)}}
             <a href={{event.eventRegLink}} target="_blank" style="text-decoration: none">

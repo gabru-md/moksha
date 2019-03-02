@@ -59,7 +59,7 @@ button {
 #data{
   overflow-x: auto;
   height: 72vh;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 
 
@@ -68,6 +68,7 @@ button {
   text-align: right;
   height: 72vh;
   -ms-overflow-style: none;  // IE 10+
+  scrollbar-width: thin;
 }
 
 
@@ -84,6 +85,12 @@ button {
   }
   .h5-mob-col {
     font-size: 1.5rem;
+  }
+  #data::-webkit-scrollbar{
+    display: inline-block;
+  }
+  .scrollable-events::-webkit-scrollbar{
+    display: inline-block;
   }
 }
 
@@ -122,5 +129,11 @@ button {
   }
   #overlay_events {
     left: 7%;
+  }
+  #data::-webkit-scrollbar{
+    display: none;
+  }
+  .scrollable-events::-webkit-scrollbar{
+    display: none;
   }
 }
