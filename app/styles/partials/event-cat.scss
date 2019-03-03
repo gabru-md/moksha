@@ -58,6 +58,7 @@ button {
 
 #data{
   overflow-x: auto;
+  overflow-y: auto;
   height: 72vh;
   scrollbar-width: thin;
 }
@@ -85,12 +86,6 @@ button {
   }
   .h5-mob-col {
     font-size: 1.5rem;
-  }
-  #data::-webkit-scrollbar{
-    display: inline-block;
-  }
-  .scrollable-events::-webkit-scrollbar{
-    display: inline-block;
   }
 }
 
