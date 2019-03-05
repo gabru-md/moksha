@@ -7,7 +7,7 @@
 
                 {{#each events as |event|}}
                 {{#if (eq event.eventType type)}}
-                <button class="card orange-card cat-events" style="background: url('/images/events/{{lowercase event.eventName}}.jpg');" onclick={{fireAction}} value={{event.eventName}} type={{event.eventType}}>
+                <button class="card orange-card cat-events" style="background: url('/images/events/{{lowercase event.eventName}}-min.jpg');" onclick={{fireAction}} value={{event.eventName}} type={{event.eventType}}>
                     <div class="text-white d-flex rgba-black-strong py-5 px-4">
                         <div class="card-text" >
                             <h3 class="card-title pt-2">
