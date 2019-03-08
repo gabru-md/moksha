@@ -11,7 +11,7 @@ window.addEventListener("popstate", function(e) {
   var home = document.getElementById('_home');
   var data = document.getElementById('data');
   var data_mob = document.getElementById('data-mob');
-  var arr = ["_pronite", "_music", "_dance", "_theatre", "_literary", "_gaming", "_talent", "_informal", "_automobile"];
+  var arr = ["_pronite", "_music", "_dance", "_theatre", "_literary", "_gaming", "_talent", "_informal", "_automobile", "_photography"];
   if (events.style.color === "white") {
     if(data.getElementsByTagName('img').length === 0 
       &&
@@ -122,7 +122,7 @@ let offExcept = (ele, fast=false) => {
 }
 
 let hideAllEventsExcept = (id) => {
-  var arr = ["_pronite", "_music", "_dance", "_theatre", "_literary", "_gaming", "_talent", "_informal", "_automobile"];
+  var arr = ["_pronite", "_music", "_dance", "_theatre", "_literary", "_gaming", "_talent", "_informal", "_automobile", "_photography"];
  //off_overlay("back");
   arr.forEach(element => {
     if (element === id) {
@@ -135,7 +135,7 @@ let hideAllEventsExcept = (id) => {
 }
 let hideAllInitially = () => {
   off_overlay("super_overlay_events");
-  var arr = ["_pronite", "_music", "_dance", "_theatre", "_literary", "_gaming", "_talent", "_informal", "_automobile"];
+  var arr = ["_pronite", "_music", "_dance", "_theatre", "_literary", "_gaming", "_talent", "_informal", "_automobile", "_photography"];
   arr.forEach(element => {
     document.getElementById(element).style.display = "none";
   });
