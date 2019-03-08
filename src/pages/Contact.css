@@ -23,7 +23,6 @@
 
 @media screen and (max-width: 500px) {
   #contacts-overlay {
-    top: 10%;
     display: flex;
     justify-content: center;
   }

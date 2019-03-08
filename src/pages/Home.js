@@ -17,7 +17,11 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    setInterval(this.func, 600);
+    this.interval = setInterval(this.func, 600);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   renderImg = () => {
