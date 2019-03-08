@@ -1,16 +1,4 @@
-{{!-- <div>
-    <button onclick="changeView(this)" value="_pronite">Pronite</button>
-    <button onclick="changeView(this)" value="_music">Music</button>
-    <button onclick="changeView(this)" value="_dance">Dance</button>
-    <button onclick="changeView(this)" value="_theatre">Theatre</button>
-    <button onclick="changeView(this)" value="_gaming">Gaming</button>
-    <button onclick="changeView(this)" value="_literary">Literary</button>
-    <button onclick="changeView(this)" value="_talent">Talent</button>
-    <button onclick="changeView(this)" value="_automobile">Automobile</button>
-    <button onclick="changeView(this)" value="_informal">Informal</button>
-
-</div> --}}
-
+{{ember-load-remover}}
 <div id="_pronite">
     {{event-categories type="pronite" name="Pronites" events=events fireAction=fireAction displayEvent=displayEvent disp_cat=disp_cat disp_eve=disp_eve goBack=goBack}}
 </div>

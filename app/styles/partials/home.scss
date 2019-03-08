@@ -1,3 +1,12 @@
+$transition-duration: 2s;
+$path-length: 157px;
+
+html, body, .ember-load-indicator {
+  width: 100%;
+  height: 100%;
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -71,10 +80,6 @@
   top: 72vh;
   left:50%;
   transform: translate(-50%, 0%);
-}
-
-#_volunteers {
-  display: none;
 }
 
  #_contact, #_home, #_events{
@@ -205,7 +210,7 @@ a {
   margin-left: 1vh;
 }
 
-#overlay_contacts, #overlay_events, #overlay_volunteers, #overlay_theatre, #overlay_pronite, #overlay_talent, #overlay_music, #overlay_gaming, #overlay_informal, #overlay_literary, #overlay_dance, #overlay_automobile, #overlay_photography  {
+#overlay_contacts, #overlay_events, #overlay_theatre, #overlay_pronite, #overlay_talent, #overlay_music, #overlay_gaming, #overlay_informal, #overlay_literary, #overlay_dance, #overlay_automobile, #overlay_photography  {
   position: fixed;
   display: none;
   width: 100%;

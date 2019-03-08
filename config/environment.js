@@ -11,6 +11,9 @@ module.exports = function(environment) {
       messagingSenderId: "843756027810"
     },  
     modulePrefix: 'moksha',
+    'ember-load' : {
+      loadingIndicatorClass : 'ember-load-indicator'
+    },
     environment,
     rootURL: '/',
     locationType: 'auto',
