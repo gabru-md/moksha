@@ -18,23 +18,22 @@
 }
 
 .nav-item {
-    color: #ffffff80;
     padding: 0 1rem;
     font-family: 'Roboto', sans-serif;
 }
 
-.nav-item h5 {
+.nav-item a {
+    color: #ffffff80;
     font-size: 1.5rem;
     line-height: 1.2;
 }
 
 .nav-item:hover {
-    color: #fff;
     cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {
-    .nav-item h5 {
+    .nav-item a {
         font-size: 1rem;
     }
 }
