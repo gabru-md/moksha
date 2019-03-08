@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 .etc {
   width: 85vw;
@@ -35,7 +35,7 @@
   font-size: 2rem;
   text-transform: uppercase;
   color: #ccc;
-  font-family: 'Roboto', cursive;
+  font-family: 'Roboto Mono', sans-serif;
 }
 
 .events-event:hover {

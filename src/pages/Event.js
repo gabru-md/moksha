@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Event.css";
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 const categories = [
   {
@@ -49,19 +49,23 @@ class Event extends Component {
   constructor(props) {
     super(props);
 
-    // this.changeRoute = this.changeRoute.bind(this);
+    this.state = { redirect: false };
   }
 
-  // changeRoute(cat) {
-  //   this.context.router.push(`/events/${cat}`);
-  // }
+  handleRedirect(cat) {
+    this.setState({ redirect: cat });
+  }
 
   render() {
-    return (
-      <div id="events-overlay">
-        <div id="events-container">
-          {categories.map(category => (
-            // <Link style={{ display: "block" }} to={`/events/${category.cat}`}>
+    if (this.state.redirect) {
+      const { redirect } = this.state;
+      this.setState({ redirect: false });
+      return <Redirect push to={`/events/${redirect}`} />;
+    } else
+      return (
+        <div id="events-overlay">
+          <div id="events-container">
+            {categories.map(category => (
               <div
                 className="events-event"
                 key={category.cat}
@@ -71,15 +75,14 @@ class Event extends Component {
                   }.jpg')`,
                   backgroundSize: "cover"
                 }}
-                // onClick={this.changeRoute(category.cat)}
+                onClick={this.handleRedirect.bind(this, category.cat)}
               >
                 {category.name}
               </div>
-            // </Link>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    );
+      );
   }
 }
 
