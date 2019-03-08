@@ -1,0 +1,8 @@
+.countdown {
+    position: fixed !important;
+    top: 62.5vh;
+    left: 50%;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    font-size: 6vh;
+}

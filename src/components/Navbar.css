@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.navbar-moksha {
+    position: fixed;
+    flex-wrap: wrap;
+    padding-left: 0;
+    top: 5%;
+    left: 5%;
+    padding: 0.5rem 0 !important;
+    z-index: 999;
+}
+
+.nav-list {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    color: #ffffff80;
+    padding: 0 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-item h5 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.nav-item:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .nav-item h5 {
+        font-size: 1rem;
+    }
+}
