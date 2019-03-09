@@ -62,7 +62,7 @@ class EventCat extends Component {
                 }}
                 onClick={this.handleRedirect.bind(
                   this,
-                  this.nameParser(this.state.events[id].eventName)
+                  this.state.events[id].eventName
                 )}
               >
                 {this.nameParser(this.state.events[id].eventName)}
