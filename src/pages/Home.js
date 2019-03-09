@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import MokshaCountdown from "../components/MokshaCountdown";
+import MokshaCountdown from "../components/MokshaCountdown";
 import "./Home.css";
 
 class Home extends Component {
@@ -34,7 +34,7 @@ class Home extends Component {
       <div id="jumbotron">
         <img id="logo1" className="img-fluid mx-auto" src="/images/1.png" alt=""/>
         {this.renderImg()}
-        {/* <MokshaCountdown /> */}
+        <MokshaCountdown />
         <img id="logo3" className="img-fluid mx-auto" src="/images/8.png" alt="Est 1983"/>
       </div>
     );

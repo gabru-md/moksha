@@ -1,8 +1,56 @@
+@font-face {
+  font-family: ZingRustDemo-Sh1;
+  src: url("/fonts/ZingRustDemo-Sh1.woff") format("woff"),
+    url("/fonts/ZingRustDemo-Sh1.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ZingRustDemo-Base;
+  src: url("/fonts/ZingRustDemo-Base.woff") format("woff"),
+    url("/fonts/ZingRustDemo-Base.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ZingRustLH1Demo-Fill;
+  src: url("/fonts/ZingRustLH1Demo-Fill.woff") format("woff"),
+    url("/fonts/ZingRustLH1Demo-Fill.ttf") format("truetype");
+}
+
+.countdown-container {
+  position: fixed;
+  top: 62.5vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6vh;
+}
+
 .countdown {
-    position: fixed !important;
-    top: 62.5vh;
-    left: 50%;
-    width: 100vw;
-    transform: translate(-50%, -50%);
-    font-size: 6vh;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: nowrap;
+  text-transform: uppercase;
+}
+
+.countdown-item {
+    margin: 0 0.25rem;
+}
+
+#countdown1 > .countdown-item {
+    font-family: ZingRustDemo-Sh1;
+    color: orange;
+    z-index: 0;
+}
+
+#countdown2 > .countdown-item {
+    font-family: ZingRustDemo-Base;
+    color: white;
+    z-index: 1;
+}
+
+#countdown3 > .countdown-item {
+    font-family: ZingRustLH1Demo-Fill;
+    color: black;
+    z-index: 2;
 }

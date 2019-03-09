@@ -3,11 +3,23 @@ import Countdown from "react-countdown-now";
 import "./MokshaCountdown.css";
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
-  if (completed) return <p>Lol</p>;
+  if (completed) return null;
   else
     return (
-      <div className="align-middle content">
-        <div className="countdown">
+      <div className="align-middle content countdown-container">
+        <div className="countdown" id="countdown1">
+          <div className="countdown-item">{days}d</div>
+          <div className="countdown-item">{hours}h</div>
+          <div className="countdown-item hom">{minutes}m</div>
+          <div className="countdown-item hom">{seconds}s</div>
+        </div>
+        <div className="countdown" id="countdown2">
+          <div className="countdown-item">{days}d</div>
+          <div className="countdown-item">{hours}h</div>
+          <div className="countdown-item hom">{minutes}m</div>
+          <div className="countdown-item hom">{seconds}s</div>
+        </div>
+        <div className="countdown" id="countdown3">
           <div className="countdown-item">{days}d</div>
           <div className="countdown-item">{hours}h</div>
           <div className="countdown-item hom">{minutes}m</div>
