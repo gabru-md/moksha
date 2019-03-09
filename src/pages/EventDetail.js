@@ -3,6 +3,14 @@ import * as firebase from "firebase";
 import "firebase/database";
 import "./EventDetail.css";
 
+const PreLoader = () => {
+  return (
+    <div class="event-preloader">
+      <img src="/spinner.gif" alt="" />
+    </div>
+  );
+};
+
 class EventDetail extends Component {
   constructor(props) {
     super(props);
@@ -32,8 +40,6 @@ class EventDetail extends Component {
   }
 
   renderRegBtn(regLink) {
-    console.log("Hi");
-    console.log(regLink);
     if (regLink !== "None")
       return (
         <a
@@ -48,8 +54,9 @@ class EventDetail extends Component {
   }
 
   render() {
-    if (!this.state.event) return null;
-    else
+    if (!this.state.event) {
+      return <PreLoader />;
+    } else
       return (
         <div id="event-overlay">
           <div className="event-container">

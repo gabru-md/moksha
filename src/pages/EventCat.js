@@ -2,6 +2,15 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import * as firebase from "firebase/app";
 import "firebase/database";
+import "./EventCat.css";
+
+const PreLoader = () => {
+  return (
+    <div class="event-preloader">
+      <img src="/spinner.gif" alt="" />
+    </div>
+  );
+};
 
 class EventCat extends Component {
   constructor(props) {
@@ -46,6 +55,8 @@ class EventCat extends Component {
           to={`/events/${this.props.match.params.eventCat}/${redirect}`}
         />
       );
+    } else if (!this.state.events) {
+      return <PreLoader />;
     } else
       return (
         <div id="events-overlay">
