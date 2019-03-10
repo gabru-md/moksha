@@ -6,7 +6,7 @@ import "./EventCat.css";
 
 const PreLoader = () => {
   return (
-    <div class="event-preloader">
+    <div className="event-preloader">
       <img src="/spinner.gif" alt="" />
     </div>
   );
@@ -20,7 +20,7 @@ class EventCat extends Component {
   }
 
   handleRedirect(e) {
-    this.setState({ redirect: e });
+    this.setState({ redirect: encodeURIComponent(e) });
   }
 
   nameParser = name => name.split(":")[0];
@@ -76,7 +76,7 @@ class EventCat extends Component {
                   this.state.events[id].eventName
                 )}
               >
-                {this.nameParser(this.state.events[id].eventName)}
+                <span>{this.nameParser(this.state.events[id].eventName)}</span>
               </div>
             ))}
           </div>

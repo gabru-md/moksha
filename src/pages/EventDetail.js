@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import * as firebase from "firebase";
+import * as firebase from "firebase/app";
 import "firebase/database";
 import "./EventDetail.css";
 
 const PreLoader = () => {
   return (
-    <div class="event-preloader">
+    <div className="event-preloader">
       <img src="/spinner.gif" alt="" />
     </div>
   );
@@ -32,7 +32,7 @@ class EventDetail extends Component {
       .database()
       .ref("events")
       .orderByChild("eventName")
-      .equalTo(eventName)
+      .equalTo(decodeURIComponent(eventName))
       .on("value", snap => {
         const key = Object.keys(snap.val())[0];
         this.setState({ event: snap.val()[key] });
@@ -45,6 +45,7 @@ class EventDetail extends Component {
         <a
           href={regLink}
           target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-default btn-warning"
           style={{ color: "white", fontWeight: "500" }}
         >

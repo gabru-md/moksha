@@ -77,7 +77,7 @@ class Event extends Component {
                 }}
                 onClick={this.handleRedirect.bind(this, category.cat)}
               >
-                {category.name}
+                <span>{category.name}</span>
               </div>
             ))}
           </div>
