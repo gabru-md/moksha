@@ -15,7 +15,7 @@ const contacts = [
     phone: "+91-8375970883"
   },
   {
-    name: "Tishya",
+    name: "Tishya Roy Choudhury",
     position: "General Secretary",
     phone: "+91-8527143288"
   },

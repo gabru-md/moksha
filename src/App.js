@@ -6,6 +6,7 @@ import Event from "./pages/Event";
 import EventCat from "./pages/EventCat";
 import EventDetail from './pages/EventDetail';
 import Contact from "./pages/Contact";
+import Sponsors from "./pages/Sponsors";
 import "./pages/Home.css";
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
               <Route exact path="/events/:eventCat" component={EventCat} />
               <Route exact path="/events/:eventCat/:eventName" component={EventDetail} />
               <Route path="/contact" component={Contact} />
+              <Route path="/sponsors" component={Sponsors} />
             </div>
           </React.Fragment>
         </Router>

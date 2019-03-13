@@ -23,6 +23,11 @@ class Navbar extends Component {
               Contact
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink to="/sponsors" activeStyle={{ coloc : "#fff" }}>
+              Sponsors
+            </NavLink>
+          </li>
         </ul>
       </nav>
     );
